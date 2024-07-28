@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/geral2.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div id="menu">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="#menu">
+                        <img class="logo" src="../imagens/logoveja.jpg" alt="logo da veja" width="50" height="50"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="true" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#sobre">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#produtos">Ajuda com a Compra</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="../index.html">Voltar a
+                                    página inicial</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div id="container">
+
+        <h2 class="titulo">Formulário da Compra</h2>
+
+        <form>
+            <fieldset class="primeiro">
+                <legend>Seus dados</legend>
+
+                <p>
+                    <label>Nome:</label>
+                    <input type="text" placeholder="Seu nome" size=40>
+                </p>
+
+                <p>
+                <p>
+                    <label>Telefone:</label>
+                    <input placeholder="xx 9xxxxxxxx" type="number">
+                </p>
+
+                <p>
+                    <label>Email:</label>
+                    <input type="email" placeholder="humberto@gmail.com" size=40>
+                </p>
+
+            </fieldset>
+
+            <fieldset class="segundo">
+
+                <legend>Selecione o Produto</legend>
+                <p>
+                    <label>Produto:</label>
+                    <select id="valorproduto" onchange="total(document.getElementById('valorproduto').value)">
+                        <option value="0">Escolha o Produto</option>
+                        <option value="1">Veja Desinfetante R$30,50</option>
+                        <option value="2">Veja Cozinha R$44,50</option>
+                        <option value="3">Veja Banheiro R$38,50</option>
+                        <option value="4">Veja Multiuso R$20,50</option>
+                        <option value="5">Veja Nature R$14,80</option>
+                        <option value="6">Veja Limpeza Pesada R$22,70</option>
+                        <option value="7">Veja Pets R$28,50</option>
+                        <option value="8">Veja Vidrex R$19,50</option>
+                        <option value="9">Veja Limpeza Perfumada R$45,50</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Quantidade:</label>
+                    <input id="quantidade" type="number">
+                </p>
+
+            </fieldset>
+
+            <fieldset class="terceiro">
+                <legend>Total da Compra</legend>
+                <p>
+                    <label>Total:</label>
+                    <input placeholder="0" id="resultado" size="10" readonly>
+                </p>
+            </fieldset>
+
+        </form>
+
+        <div id="botoes">
+        <button onclick="calcular()">Calcular </button>
+        <button onclick="confirmar()">Confirmar</button>
+          </div>  
+
+    </div>
+
+    <div id="footer">
+        <footer class="bg-primary text-white text-center text-lg-start">
+
+            <div class="container p-4">
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Veja®</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Contato</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <p>Telefone: 0800 887 0744</p>
+                            </li>
+                            <li>
+                                <p>Carta: Av. Presidente Juscelino Kubitschek, 1909, Torre Norte, 24o andar São Paulo/SP
+                                    - CEP
+                                    04543-907</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-0">Endereço</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>Rua Barão de Vitória, Casa Grande, Diadema SP, 09961660 ,São Paulo/SP - CEP 04543-907
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <p> © 2023 Copyright: Lorenzo-Simonetti/Roger-Couto</p>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script src="../js/java.js"></script>
+
+</body>
+
+</html>

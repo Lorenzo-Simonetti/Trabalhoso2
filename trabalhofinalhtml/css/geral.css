@@ -1,0 +1,27 @@
+body{
+  font-family: sans-serif;
+}
+.logo {
+  border-radius: 50%;
+}
+.carousel-inner {
+  margin-top: 10px;
+}
+.display-4 {
+  padding: 10px;
+  margin-top: 40px;
+}
+.lead {
+  background-color: hsl(216, 98%, 53%);
+  padding: 10px;
+  color: white;
+}
+.container .p-4 {
+  margin-top: 80px;
+}
+#inicio{
+    margin-top: 70px;
+}
+.cardbaixo{
+  margin-bottom: 100px;
+}
